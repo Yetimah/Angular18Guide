@@ -1,0 +1,30 @@
+<p>
+    <label for="budgetType">
+        Enter your budget type:
+        <input id="budgetType" type="text" [(ngModel)]="budgetType" [ngModelOptions]="{standalone: true}" />
+    </label>
+</p>
+<p>
+    <label for="budgetAmount">
+        Enter your budget amount:
+        <input id="budgetAmount" type="text" [(ngModel)]="budgetAmount" [ngModelOptions]="{standalone: true}" />
+    </label>
+</p>
+<p>
+    <label for="intendedNumofYears">
+        Enter your number of years you intend to save for:
+        <input id="intendedNumofYears" type="text" [(ngModel)]="intendedNumofYears"
+            [ngModelOptions]="{standalone: true}" />
+    </label>
+</p>
+<p> <button (click)="calculateEstimatedOverallAmount()">Show total amount</button>
+    Total amount is: {{totalAmount |star}}
+    random value is {{randomValue |random}}
+    random value 2 is {{totalAmount |random}}
+</p>
+<!-- <p>{{ budgetTypes }}</p> -->
+<p>
+    @for (ingredient of ingredientList; track ingredient.name) {
+    <li>{{ ingredient.quantity| number:"3.2-2" }} - {{ ingredient.name | uppercase }}</li>
+    }
+</p>
